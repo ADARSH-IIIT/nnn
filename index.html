@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CodePen Clone</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="slider-container">
+    <h2>Adjust the Slider</h2>
+    <input type="range" min="0" max="1920" value="1920" class="slider" id="widthSlider">
+    <p >width<span id="widthsliderValue">1920</span></p>
+  </div>
+  
+  <div class="slider-container">
+    <h2>Adjust the Slider</h2>
+    <input type="range" min="0" max="1080" value="1080" class="slider" id="heightSlider">
+    <p >height<span id="heightsliderValue">1080</span></p>
+  </div>
+
+
+  <div class="container">
+    <div class="editor">
+      <div class="tabs">
+        <button onclick="switchTab('html')">HTML</button>
+        <button onclick="switchTab('css')">CSS</button>
+        <button onclick="switchTab('js')">JavaScript</button>
+      </div>
+      <textarea id="html" class="editor-pane" placeholder="Write HTML here"></textarea>
+      <textarea id="css" class="editor-pane hidden" placeholder="Write CSS here"></textarea>
+      <textarea id="js" class="editor-pane hidden" placeholder="Write JavaScript here"></textarea>
+    </div>
+    <div class="preview" id="preview">
+      <iframe id="preview-frame" sandbox="allow-scripts" ></iframe>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
